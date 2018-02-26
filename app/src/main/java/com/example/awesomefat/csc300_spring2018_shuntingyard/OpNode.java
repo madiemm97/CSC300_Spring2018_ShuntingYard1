@@ -4,6 +4,8 @@ package com.example.awesomefat.csc300_spring2018_shuntingyard;
  * Created by awesomefat on 2/22/18.
  */
 
+//Operation Node = + - * /
+
 public class OpNode extends Node
 {
     private char payload;
