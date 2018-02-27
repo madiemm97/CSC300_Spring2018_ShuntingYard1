@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity
             shuntingYardInputArray[i] = shuntingYardInput.charAt(i);
         }
 
+        this.scanThroughInput(shuntingYardInputArray);
+
         //"10+3-2" -> turn into a queue of NumNodes and OpNodes
         Queue q = new Queue();
         q.enqueue(10);
@@ -39,14 +41,28 @@ public class MainActivity extends AppCompatActivity
         System.out.println(q.dequeue() instanceof OpNode);
     }
 
-    public void scanThroughInput(View v)
+    public void scanThroughInput(char[] ar)
     {
+        String numbers = "1234567890";
+        ar = onCreate().shuntingYardInputArray;
+
         for(int i = 0; i < shuntingYardInput.length(); i++)
         {
-            if(shuntingYardInput.charAt(i) == )
+            for(int j = 0; j < numbers.length(); j++)
             {
-                q.enqueue()
+                //this is for numnodes
+                if(ar[i] == numbers.charAt(j))
+                {
+                    q.enqueue(ar[i]);
+                }
+
+                //this is for opnodes
+                else
+                {
+                    q.enqueue(ar[i]);
+                }
             }
+
         }
     }
 }
